@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fragmentados — Baixe o jogo</title>
+<meta name="description" content="Fragmentados: toda escolha é única. Baixe o APK para Android.">
+<meta property="og:title" content="Fragmentados">
+<meta property="og:description" content="Toda escolha é única. Baixe o APK para Android.">
+<meta property="og:image" content="img/poster.jpg">
+<meta name="theme-color" content="#1a0d09">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Noto+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#1a0d09; --bg2:#2a1510; --card:#201511; --line:#4a3a30;
+    --gold:#d9b55f; --text:#efe3d2; --muted:#b09a86; --red:#c8321f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:'Noto Serif',Georgia,serif; line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,.btn,.chip,.label{font-family:'Oswald',Impact,sans-serif;text-transform:uppercase;letter-spacing:.04em}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+
+  /* HERO */
+  .hero{
+    position:relative; padding:28px 0 36px; text-align:center; overflow:hidden;
+    background:
+      linear-gradient(180deg,rgba(26,13,9,.55),var(--bg) 92%),
+      url(img/poster.jpg) center 20%/cover no-repeat;
+  }
+  .hero .cover{
+    width:100%; border-radius:14px; border:2px solid #3a1f16;
+    box-shadow:0 14px 40px rgba(0,0,0,.6); display:block;
+  }
+  .tagline{font-style:italic;color:var(--muted);margin:18px 0 22px;font-size:1.05rem}
+  .btn{
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    width:100%; padding:17px 20px; border-radius:14px; border:0; cursor:pointer;
+    background:linear-gradient(180deg,#d9402a,#a62617); color:#fff;
+    font-size:1.3rem; font-weight:600; text-decoration:none;
+    box-shadow:0 6px 0 #6b1409,0 12px 26px rgba(200,50,31,.35);
+    transition:transform .08s, box-shadow .08s;
+  }
+  .btn:active{transform:translateY(4px);box-shadow:0 2px 0 #6b1409,0 6px 14px rgba(200,50,31,.3)}
+  .btn svg{width:24px;height:24px;fill:currentColor}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+  .chip{
+    font-size:.78rem;padding:5px 12px;border:1px solid var(--line);
+    border-radius:99px;color:var(--muted);background:rgba(0,0,0,.25)
+  }
+
+  /* SEÇÕES */
+  section{padding:30px 0}
+  h2{color:var(--gold);font-size:1.6rem;font-weight:500;margin-bottom:14px}
+  .synopsis p{margin-bottom:14px;color:#dccdb8}
+  .synopsis p:first-of-type{font-size:1.1rem;color:var(--text)}
+
+  /* GALERIA */
+  .gallery{
+    display:flex; gap:14px; overflow-x:auto; scroll-snap-type:x mandatory;
+    padding:4px 20px 18px; margin:0 -20px; -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin; scrollbar-color:var(--line) transparent;
+  }
+  .gallery button{
+    flex:0 0 auto; scroll-snap-align:center; background:none; border:0; padding:0; cursor:zoom-in;
+  }
+  .gallery img{
+    height:430px; width:auto; display:block; border-radius:14px;
+    border:2px solid var(--line); box-shadow:0 8px 22px rgba(0,0,0,.5);
+  }
+  .gallery button.wide img{height:330px;margin-top:50px}
+  .hint{font-size:.85rem;color:var(--muted);text-align:center}
+
+  /* INSTALAÇÃO */
+  .install{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .install ol{padding-left:20px;color:#dccdb8}
+  .install li{margin-bottom:8px}
+  .install small{display:block;margin-top:10px;color:var(--muted)}
+
+  footer{padding:30px 0 50px;text-align:center;color:var(--muted);font-size:.9rem}
+  footer .rights{margin-top:18px;font-size:.78rem}
+  footer a{color:var(--gold);text-decoration:none;font-family:'Oswald',sans-serif;font-size:1.1rem;letter-spacing:.03em}
+
+  /* LIGHTBOX */
+  #lb{
+    position:fixed;inset:0;background:rgba(10,4,2,.94);display:none;
+    align-items:center;justify-content:center;z-index:50;padding:16px;cursor:zoom-out;
+  }
+  #lb.open{display:flex}
+  #lb img{max-width:100%;max-height:100%;border-radius:10px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="cover" src="img/capa.jpg" alt="Fragmentados — capa do jogo">
+    <p class="tagline">Toda escolha é única.</p>
+    <a class="btn" href="fragmentados.apk" download>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM12 3v10.2l3.6-3.6L17 11l-5 5-5-5 1.4-1.4L11 13.2V3h1z"/></svg>
+      Baixar APK
+    </a>
+    <div class="chips">
+      <span class="chip">Android</span>
+      <span class="chip">Versão 3.0</span>
+      <span class="chip">Demo · 5 capítulos</span>
+      <span class="chip">Grátis</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="synopsis">
+    <h2>Sinopse</h2>
+    <p>Você acorda em um hospital quase em ruínas, sem saber quanto tempo dormiu. Lá fora, Ghost-Fox está tomada pela névoa, e o mundo se partiu em pedaços que ninguém consegue explicar: os fragmentos.</p>
+    <p>Com apenas uma voz no celular como guia, você enfrenta criaturas deformadas pela névoa, cruza com sobreviventes que não confiam em ninguém e é salvo por uma figura misteriosa que parece saber exatamente quem você é. Cada pista abre uma pergunta nova, e nem todo mundo que oferece ajuda está do seu lado.</p>
+    <p>Cada conversa e cada decisão muda o rumo da história. Toda escolha é única.</p>
+  </section>
+
+  <section>
+    <h2>Imagens</h2>
+    <div class="gallery">
+      <button data-full="img/menu.jpg"><img src="img/menu.jpg" alt="Menu principal" loading="lazy"></button>
+      <button data-full="img/cena-cap3.jpg"><img src="img/cena-cap3.jpg" alt="Capítulo 3 — o mapa da cidade" loading="lazy"></button>
+      <button data-full="img/capitulos.jpg"><img src="img/capitulos.jpg" alt="Lista de capítulos" loading="lazy"></button>
+      <button data-full="img/poster.jpg"><img src="img/poster.jpg" alt="Pôster de Fragmentados" loading="lazy"></button>
+    </div>
+    <p class="hint">Deslize para o lado · toque para ampliar</p>
+  </section>
+
+  <section>
+    <h2>Como instalar</h2>
+    <div class="install">
+      <ol>
+        <li>Toque em <strong>Baixar APK</strong> e aguarde o download.</li>
+        <li>Abra o arquivo baixado.</li>
+        <li>Se o Android pedir, permita a instalação de apps desta fonte.</li>
+        <li>Toque em <strong>Instalar</strong> e pronto.</li>
+      </ol>
+      <small>Disponível apenas para Android.</small>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Siga o desenvolvimento</p>
+  <a href="https://instagram.com/lordverso_oficial" target="_blank" rel="noopener">@lordverso_oficial</a>
+  <p class="rights">© 2026 @lordverso_oficial. Todos os direitos reservados.</p>
+</footer>
+
+<div id="lb" aria-hidden="true"><img alt=""></div>
+
+<script>
+  const lb = document.getElementById('lb'), lbImg = lb.querySelector('img');
+  document.querySelectorAll('.gallery button').forEach(b => b.addEventListener('click', () => {
+    lbImg.src = b.dataset.full; lbImg.alt = b.querySelector('img').alt; lb.classList.add('open');
+  }));
+  lb.addEventListener('click', () => lb.classList.remove('open'));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
+</script>
+</body>
+</html>
