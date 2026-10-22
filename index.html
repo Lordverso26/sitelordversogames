@@ -48,6 +48,9 @@
     transition:transform .08s, box-shadow .08s;
   }
   .btn:active{transform:translateY(4px);box-shadow:0 2px 0 #6b1409,0 6px 14px rgba(200,50,31,.3)}
+
+  .btn-play{margin-top:14px;background:transparent;color:var(--gold);border:2px solid var(--gold);box-shadow:none;font-size:1.15rem;padding:14px 20px}
+  .btn-play:active{transform:translateY(2px);background:rgba(217,181,95,.12);box-shadow:none}
   .btn svg{width:24px;height:24px;fill:currentColor}
   .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
   .chip{
@@ -106,9 +109,13 @@
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM12 3v10.2l3.6-3.6L17 11l-5 5-5-5 1.4-1.4L11 13.2V3h1z"/></svg>
       Baixar APK
     </a>
+    <a class="btn btn-play" href="jogar.html">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+      Jogar no navegador
+    </a>
     <div class="chips">
       <span class="chip">Android</span>
-      <span class="chip">Versão 3.0</span>
+      <span class="chip">Versão 3.1</span>
       <span class="chip">Demo · 5 capítulos</span>
       <span class="chip">Grátis</span>
     </div>
@@ -144,7 +151,7 @@
         <li>Se o Android pedir, permita a instalação de apps desta fonte.</li>
         <li>Toque em <strong>Instalar</strong> e pronto.</li>
       </ol>
-      <small>Disponível apenas para Android.</small>
+      <small>O APK é só para Android. Em outros aparelhos, use o botão Jogar no navegador.</small>
     </div>
   </section>
 
